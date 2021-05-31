@@ -4,7 +4,6 @@ import SearchWeather from './SearchWeather';
 import WeatherList from './WeatherLIst';
 
 const Weather = () => {
-
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState("Baku");
     const [weather, setWeather] = useState();
@@ -31,21 +30,25 @@ const Weather = () => {
         setWeather(((weatherData.main.temp - 273.15) * 9 / 5 + 32).toFixed(4))
     }
 
+    const handleDelete = () => {
+        setWeatherData(null);
+    }
+
     useEffect(() => {
         getData();
     }, [])
 
     return (
         <>
-            <SearchWeather setCity={setCity} getData={getData} />
+            <SearchWeather setCity={setCity} getData={getData} city={city} />
             <WeatherList
                 weatherData={weatherData}
                 weather={weather}
                 convertFahrenheit={convertFahrenheit}
                 convertCelcius={convertCelcius}
                 convertKelvin={convertKelvin}
+                handleDelete={handleDelete}
             />
-
         </>
     )
 }
