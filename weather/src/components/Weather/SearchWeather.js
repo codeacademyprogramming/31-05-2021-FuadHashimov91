@@ -1,10 +1,10 @@
-const SearchWeather = ({ setCity, getData, city }) => {
+const SearchWeather = ({ setCity, getData}) => {
     return (
         <div className='col-12'>
             <div className="input-group d-flex justify-content-center mt-4" >
                 <div className="form-outline ">
                     <input
-                        value={city}
+                        required
                         onChange={(e) => setCity(e.target.value)}
                         type="search" id="form1" className="form-control" placeholder="Search"
                     />

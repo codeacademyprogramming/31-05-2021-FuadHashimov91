@@ -10,8 +10,8 @@ const WeatherList = (
     return (
         <div className="container">
             <div className="App row">
-                <div className='col-12'>
-                    <div className='card'>
+                <div className='col-12 card mt-5'>
+                    <div>
                         {
                             weatherData !== null ? (
                                 <div className='row'>

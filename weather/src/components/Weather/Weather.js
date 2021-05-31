@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getWeatherData } from '../data/weatherApi';
+import getWeatherData  from '../../data/weatherApi';
 import SearchWeather from './SearchWeather';
 import WeatherList from './WeatherLIst';
 
@@ -12,6 +12,7 @@ const Weather = () => {
         try {
             const data = await getWeatherData(city);
             setWeatherData(data);
+            console.log(data);
         }
         catch (error) {
             console.log(error.message);
@@ -40,7 +41,7 @@ const Weather = () => {
 
     return (
         <>
-            <SearchWeather setCity={setCity} getData={getData} city={city} />
+            <SearchWeather setCity={setCity} getData={getData}/>
             <WeatherList
                 weatherData={weatherData}
                 weather={weather}
