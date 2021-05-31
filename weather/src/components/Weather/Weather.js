@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import getWeatherData  from '../../data/weatherApi';
+import getWeatherData from '../../data/weatherApi';
 import SearchWeather from './SearchWeather';
 import WeatherList from './WeatherLIst';
 
@@ -41,7 +41,8 @@ const Weather = () => {
 
     return (
         <>
-            <SearchWeather setCity={setCity} getData={getData}/>
+            <h1>Weather App</h1>
+            <SearchWeather setCity={setCity} getData={getData} />
             <WeatherList
                 weatherData={weatherData}
                 weather={weather}
