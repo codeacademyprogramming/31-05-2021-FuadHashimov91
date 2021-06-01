@@ -12,7 +12,6 @@ const Weather = () => {
         try {
             const data = await getWeatherData(city);
             setWeatherData(data);
-            console.log(data);
         }
         catch (error) {
             console.log(error.message);
@@ -41,7 +40,7 @@ const Weather = () => {
 
     return (
         <>
-            <h1>Weather App</h1>
+            <h1 className='text-center m-5'>Weather App</h1>
             <SearchWeather setCity={setCity} getData={getData} />
             <WeatherList
                 weatherData={weatherData}

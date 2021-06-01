@@ -27,7 +27,9 @@ const WeatherList = (
                                             <li className='p-3'><input onClick={convertFahrenheit} type='radio' />Fahrenheit</li>
                                         </ul>
                                     </div>
-                                    <button onClick={handleDelete} className='btn btn-success'>Delete</button>
+                                    <div className='col-12'>
+                                        <button onClick={handleDelete} className='btn btn-success f-right'>Delete</button>
+                                    </div>
                                 </div>
                             ) : null
                         }
